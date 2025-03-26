@@ -1,3 +1,4 @@
 {
-    "name": "Tilt Pi"
+    "name": "Tilt Pi",
+    "content_in_root": false
 }

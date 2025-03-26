@@ -10,5 +10,7 @@
   "quality_scale": "bronze",
   "requirements": [],
   "ssdp": [],
-  "zeroconf": []
+  "zeroconf": [],
+  "version": "1.0.0",
+  "issue_tracker": "https://github.com/michaelheyman/hass-tilt-pi/issues"
 }
