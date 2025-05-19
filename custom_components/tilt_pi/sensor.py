@@ -84,9 +84,8 @@ class TiltSensor(TiltEntity, SensorEntity):
         hydrometer: TiltHydrometerData,
     ) -> None:
         """Initialize the sensor."""
-        super().__init__(coordinator, hydrometer)
+        super().__init__(coordinator, hydrometer, description.key)
         self.entity_description = description
-        self._attr_unique_id = f"{hydrometer.mac_id}_{description.key}"
 
     @property
     def native_value(self) -> StateType:

@@ -17,11 +17,12 @@ class TiltEntity(CoordinatorEntity[TiltPiDataUpdateCoordinator]):
         self,
         coordinator: TiltPiDataUpdateCoordinator,
         hydrometer: TiltHydrometerData,
+        entity_key: str,
     ) -> None:
         """Initialize the entity."""
         super().__init__(coordinator)
         self._mac_id = hydrometer.mac_id
-        self._attr_unique_id = hydrometer.mac_id
+        self._attr_unique_id = f"{hydrometer.mac_id}_{entity_key}"
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, hydrometer.mac_id)},
             name=f"Tilt {hydrometer.color}",
